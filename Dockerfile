@@ -10,6 +10,7 @@ RUN apt-get update \
 ENV LANG en_US.utf8
 
 ONBUILD COPY ./*.zip /release/
+
 ONBUILD RUN cd /release \
     && unzip *.zip \
     && rm *.zip \
